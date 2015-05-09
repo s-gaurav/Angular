@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="MyViewer">
+
+<head>
+  <script data-require="angular.js@*" data-semver="1.3.0-beta.5" 
+  src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="NgLoop.js"></script>
+</head>
+
+<body ng-controller="MainController">
+  You are entering {{ userName }}
+  {{ countDown }}
+  <form name="searchUser" ng-submit="search(userName)">
+    <input type="search" required placeholder="find user in Github" ng-model="userName" />
+    <input type="submit" value="Search" >
+  </form>
+  <div ng-include="'userprofile.html'" ng-show="person"></div>
+</body>
+
+</html>
